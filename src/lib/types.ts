@@ -6,7 +6,7 @@ export { IChainedSet } from './chainedSet'
 export type IChainedMapSet<T = any, P = any> = (value: T) => P
 export type IChainedSetAdd<T = any, P = any> = (value: T) => P
 
-export interface IRollupConfig extends RollupOptions {
+export interface IRollupChainConfig extends RollupOptions {
   input: string | string[]
   output: OutputOptions
 }

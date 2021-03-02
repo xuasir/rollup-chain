@@ -1,6 +1,6 @@
 {
   "name": "@xus/rollup-chain",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "a rollup chain utils like webpack-chain",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -24,7 +24,9 @@
   },
   "homepage": "https://github.com/xus-code/rollup-chain#readme",
   "dependencies": {
-    "rollup": "^2.39.1",
+    "rollup": "^2.39.1"
+  },
+  "devDependencies": {
     "@types/node": "^14.14.22",
     "@typescript-eslint/eslint-plugin": "^4.14.1",
     "@typescript-eslint/parser": "^4.14.1",

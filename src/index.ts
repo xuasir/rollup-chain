@@ -1,5 +1,5 @@
 import type { RollupOptions } from 'rollup'
-import type { IChainedMapSet, IRollupConfig } from './lib/types'
+import type { IChainedMapSet, IRollupChainConfig } from './lib/types'
 // ops
 import { ChainedMap, ChainedSet } from './lib'
 import Output from './output'
@@ -43,7 +43,7 @@ class RollupChain extends ChainedMap {
       .map((plugin) => (plugin as IPlugin).toConfig())
       .filter(Boolean)
 
-    const finalEntries = this.clean(entries) as IRollupConfig
+    const finalEntries = this.clean(entries) as IRollupChainConfig
     return !Object.keys(finalEntries).length ? null : finalEntries
   }
 
@@ -95,3 +95,6 @@ class RollupChain extends ChainedMap {
 export type IRollupChain = InstanceType<typeof RollupChain>
 
 export default RollupChain
+
+// types
+export { IRollupChainConfig } from './lib/types'
