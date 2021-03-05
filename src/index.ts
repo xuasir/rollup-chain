@@ -32,6 +32,20 @@ class RollupChain extends ChainedMap {
     return this.plugins.getOrCompute(name, () => new Plugin(this, name))
   }
 
+  clearPlugins() {
+    return this.plugins.clear().end()
+  }
+
+  clear() {
+    super.clear()
+    this.plugins.clear()
+    this.external.clear()
+    this.watch.clear()
+    this.treeshake.clear()
+    this.output.clear()
+    return this
+  }
+
   toConfig() {
     const entries = this.entries() || {}
     entries.external = this.external.values()
