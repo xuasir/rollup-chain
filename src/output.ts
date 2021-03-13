@@ -24,6 +24,7 @@ class Output<T = any> extends ChainedMap<T> {
   namespaceToStringTag!: IChainedMapSet<boolean, this>
   inlineDynamicImports!: IChainedMapSet<boolean, this>
   manualChunks!: IChainedMapSet<OutputOptions['manualChunks'], this>
+  dir!: IChainedMapSet<string, this>
 
   constructor(parent: T) {
     super(parent)
@@ -48,7 +49,8 @@ class Output<T = any> extends ChainedMap<T> {
       'entryFileNames',
       'namespaceToStringTag',
       'inlineDynamicImports',
-      'manualChunks'
+      'manualChunks',
+      'dir'
     ])
   }
 }

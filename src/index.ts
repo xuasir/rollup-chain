@@ -8,7 +8,7 @@ import Treeshake from './treeshake'
 import Watch from './watch'
 
 class RollupChain extends ChainedMap {
-  input!: IChainedMapSet<string | string[], this>
+  input!: IChainedMapSet<string | Record<string, string>, this>
   cache!: IChainedMapSet<RollupOptions['cache'], this>
   onwarn!: IChainedMapSet<RollupOptions['onwarn'], this>
   context!: IChainedMapSet<RollupOptions['context'], this>
@@ -30,6 +30,11 @@ class RollupChain extends ChainedMap {
 
   plugin(name: string) {
     return this.plugins.getOrCompute(name, () => new Plugin(this, name))
+  }
+
+  removePlugn(name: string) {
+    this.plugins.delete(name)
+    return this
   }
 
   clearPlugins() {
