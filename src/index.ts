@@ -116,4 +116,4 @@ export type IRollupChain = InstanceType<typeof RollupChain>
 export default RollupChain
 
 // types
-export { IRollupChainConfig } from './lib/types'
+export type { IRollupChainConfig } from './lib/types'
