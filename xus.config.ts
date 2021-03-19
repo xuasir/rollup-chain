@@ -6,18 +6,7 @@ export default defineConfig({
     formats: ['esm', 'cjs'],
     sourcemap: false,
     minify: false,
-    alwaysEmptyDistDir: true,
-    afterBuild: [
-      {
-        bin: 'yarn',
-        args: ['types'],
-        message: {
-          start: 'generate types start',
-          failed: 'generate types failed',
-          succeed: 'generate types succeed'
-        }
-      }
-    ]
+    alwaysEmptyDistDir: true
   },
   lint: {
     eslint: {

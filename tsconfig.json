@@ -1,15 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ES2015",
-    "module": "commonjs",
+    "target": "esnext",
+    "module": "esnext",
     "strict": true,
     "declaration": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "lib": ["esnext"],
-    "outDir": "./dist",
     "isolatedModules": true
   },
-  "exclude": ["**/__test__/**/*", "**/node_modules/**/*"],
+  "exclude": ["**/__test__/**/*", "**/node_modules/**/*", "dist/**/*"],
   "include": ["src/**/*"]
 }
