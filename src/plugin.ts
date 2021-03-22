@@ -2,11 +2,12 @@ import type { PluginImpl, Plugin as RollupPlugin } from 'rollup'
 import type { IChainedMapSet } from './lib/types'
 import { ChainedMap } from './lib'
 
+type IPluginOps = Record<string, unknown>
 class Plugin<T = any> extends ChainedMap<T> {
   private name: string
   private type: string
   private init!: IChainedMapSet<
-    (plugin: PluginImpl, args: any[]) => RollupPlugin,
+    (plugin: PluginImpl, args: IPluginOps) => RollupPlugin,
     this
   >
 
@@ -17,16 +18,13 @@ class Plugin<T = any> extends ChainedMap<T> {
     this.extend(['init'])
     this.init((plugin, args) => {
       if (typeof plugin === 'function') {
-        return args ? plugin(...args) : plugin()
+        return args ? plugin(args) : plugin()
       }
       return plugin
     })
   }
 
-  use<T extends PluginImpl<Record<string, any>>>(
-    plugin: T,
-    args?: Parameters<T>
-  ) {
+  use<T extends PluginImpl<IPluginOps>>(plugin: T, args?: Parameters<T>[0]) {
     this.set('plugin', plugin)
     if (args) {
       this.set('args', args)
@@ -34,14 +32,17 @@ class Plugin<T = any> extends ChainedMap<T> {
     return this
   }
 
-  tap(f: (...args: any[]) => any[]) {
-    this.set('args', f(this.get('args') || []))
+  tap(f: (args: IPluginOps) => IPluginOps) {
+    this.set('args', f(this.get('args') || {}))
     return this
   }
 
   set(key: 'plugin' | 'args', value: any) {
-    if (key === 'args' && !Array.isArray(value)) {
-      throw new Error(`args should be arrary`)
+    if (
+      key === 'args' &&
+      Object.prototype.toString.call(value) !== '[object Object]'
+    ) {
+      throw new Error(`args should be Object`)
     }
     return super.set(key, value)
   }

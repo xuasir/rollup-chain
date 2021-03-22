@@ -39,7 +39,7 @@ class ChainedSet<T = any, U = any> extends Chainable<T> {
   }
 
   mergeBase(arr: U[]) {
-    this.store = new Set([...arr, ...this.store])
+    this.store = new Set([...this.store, ...arr])
     return this
   }
 }

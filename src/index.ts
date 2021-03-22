@@ -12,6 +12,18 @@ class RollupChain extends ChainedMap {
   cache!: IChainedMapSet<RollupOptions['cache'], this>
   onwarn!: IChainedMapSet<RollupOptions['onwarn'], this>
   context!: IChainedMapSet<RollupOptions['context'], this>
+  preserveEntrySignatures!: IChainedMapSet<
+    RollupOptions['preserveEntrySignatures'],
+    this
+  >
+  experimentalCacheExpiry!: IChainedMapSet<number, this>
+  acorn!: IChainedMapSet<RollupOptions['acorn'], this>
+  acornInjectPlugins!: IChainedMapSet<RollupOptions['acornInjectPlugins'], this>
+  moduleContext!: IChainedMapSet<RollupOptions['moduleContext'], this>
+  perf!: IChainedMapSet<RollupOptions['perf'], this>
+  preserveSymlinks!: IChainedMapSet<RollupOptions['preserveSymlinks'], this>
+  shimMissingExports!: IChainedMapSet<RollupOptions['shimMissingExports'], this>
+  strictDeprecations!: IChainedMapSet<RollupOptions['strictDeprecations'], this>
   external
   watch
   treeshake
@@ -25,14 +37,28 @@ class RollupChain extends ChainedMap {
     this.treeshake = new Treeshake<this>(this)
     this.watch = new Watch<this>(this)
     this.plugins = new ChainedMap<this>(this)
-    this.extend(['input', 'cache', 'onwarn', 'context'])
+    this.extend([
+      'input',
+      'cache',
+      'onwarn',
+      'context',
+      'preserveEntrySignatures',
+      'experimentalCacheExpiry',
+      'acorn',
+      'acornInjectPlugins',
+      'moduleContext',
+      'perf',
+      'preserveSymlinks',
+      'shimMissingExports',
+      'strictDeprecations'
+    ])
   }
 
   plugin(name: string) {
     return this.plugins.getOrCompute(name, () => new Plugin(this, name))
   }
 
-  removePlugn(name: string) {
+  removePlugin(name: string) {
     this.plugins.delete(name)
     return this
   }
@@ -78,7 +104,7 @@ class RollupChain extends ChainedMap {
     return this.clean(entries)
   }
 
-  mergeBase(obj: Record<string, any>) {
+  merge(obj: Record<string, any>) {
     super.mergeBase(obj, [
       'plugins',
       'output',

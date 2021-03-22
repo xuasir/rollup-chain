@@ -123,13 +123,23 @@ class ChainedMap<T = any> extends Chainable<T> {
       if (omit.includes(key)) {
         return
       }
-
       const value = obj[key]
-
-      if (!this.has(key)) {
-        this.set(key, value)
-      }
+      this.set(key, value)
     })
+
+    return this
+  }
+
+  when(
+    condition: boolean,
+    whenTruthy: (self: this) => void = () => undefined,
+    whenFalsy: (self: this) => void = () => undefined
+  ) {
+    if (condition) {
+      whenTruthy(this)
+    } else {
+      whenFalsy(this)
+    }
 
     return this
   }
