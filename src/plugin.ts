@@ -2,7 +2,7 @@ import type { PluginImpl, Plugin as RollupPlugin } from 'rollup'
 import type { IChainedMapSet } from './lib/types'
 import { ChainedMap } from './lib'
 
-type IPluginOps = Record<string, unknown>
+type IPluginOps = Record<string, any>
 class Plugin<T = any> extends ChainedMap<T> {
   private name: string
   private type: string
