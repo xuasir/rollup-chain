@@ -1923,10 +1923,10 @@
     core-js "^3.8.1"
     semver "^7.3.4"
 
-"@xus/cli-shared@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@xus/cli-shared/-/cli-shared-0.3.1.tgz#4d6534d721c3e617aafd632fd0f533f21887f502"
-  integrity sha512-2Ak26DTAhMLNR6S+govoz6AH57hTSHJt8Y7dTZv8koam2W0ho+8pPF9jOBjIXewqS1gi+4vUUFKkxg8jrAsaUQ==
+"@xus/cli-shared@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@xus/cli-shared/-/cli-shared-0.4.0.tgz#937770d90e0a7051b89ebb1f9e3326a1510fd88e"
+  integrity sha512-aFwHO/nVD8a3jDIEX3RLXil9OE8eIqJQYEXKl9RvT5U6yvo0232cyJUx1Kzp1br43kJLiPGlLQRQuY6rGG+nhQ==
   dependencies:
     "@types/debug" "^4.1.5"
     "@types/yargs-parser" "^20.2.0"
@@ -1949,33 +1949,33 @@
     semver "^7.3.4"
     yargs-parser "^20.2.5"
 
-"@xus/cli-types@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@xus/cli-types/-/cli-types-0.3.1.tgz#7c5f4608023d35c7152108518ced564ce520af98"
-  integrity sha512-s6s/ajwn7YttumsIiqjrikpxO7IzrYTVEq8W44ttUNm4uWG0Brg1j4wpZAzYyd5T9pVJPzuViDKqIDw3/gVJJw==
+"@xus/cli-types@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@xus/cli-types/-/cli-types-0.4.0.tgz#9b509f420d82f23f3376ab9db02d172759d9c6b6"
+  integrity sha512-set0j2u6wphbcJuvsJypcfE7cQohlQAnRPNvrJPkaxVHQ+FZcGyli32N+DPkVnSdF2TLxu57G6iT7yLZxQ8lJg==
   dependencies:
-    "@xus/cli-shared" "^0.3.1"
-    "@xus/core" "^0.3.1"
-    "@xus/rollup-chain" "^0.2.6"
+    "@xus/cli-shared" "^0.4.0"
+    "@xus/core" "^0.4.0"
+    "@xus/rollup-chain" "^0.3.1"
     esbuild "^0.9.2"
     webpack-chain "^6.5.1"
 
-"@xus/cli@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@xus/cli/-/cli-0.3.1.tgz#000bd69f0848e935041717ebf89669eb711c1070"
-  integrity sha512-0GpuaAT6lg6shSQl/tsGnN0tO55HXfFU+wi7b21TBjx5I7iBNcS8CW+f7ePE0IPkqGbHBzqyAqVM5splEkewCA==
+"@xus/cli@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@xus/cli/-/cli-0.4.0.tgz#c4dbe774d526a2619068cc1a7121b7deb54dab50"
+  integrity sha512-8B8VpeQyGmXRHqB/3w0QeCp0GjYHOq7ljgyedNKaycQg1Y0XsK6vrifwvQWi1Cp7hkZXcrLSu7mE4ZP6su5OVg==
   dependencies:
-    "@xus/cli-shared" "^0.3.1"
-    "@xus/cli-types" "^0.3.1"
-    "@xus/core" "^0.3.1"
-    "@xus/preset-built-in" "^0.3.1"
+    "@xus/cli-shared" "^0.4.0"
+    "@xus/cli-types" "^0.4.0"
+    "@xus/core" "^0.4.0"
+    "@xus/preset-built-in" "^0.4.0"
 
-"@xus/core@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@xus/core/-/core-0.3.1.tgz#235f6a6bb363635e519f4a9e08a0d01d534434a8"
-  integrity sha512-ZMcV1BZxyEzmIfLdZJaeWwMd2KbxCHePMPEYlctoBC6gO1ViZKZ/zYwp9fNpNCg4oqVnQVoq096ZNJObcLmeWA==
+"@xus/core@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@xus/core/-/core-0.4.0.tgz#b9396b7687a8445284265b77939d2fbd3d96e632"
+  integrity sha512-oWKlJiX+jHi2kPMgDBPggI0IZeM8dYoBKiiAvMrkSO+htoQRzyIJ/74a2zmWmEhgc5wijpqmZ1C3UemIB6Qtxw==
   dependencies:
-    "@xus/cli-shared" "^0.3.1"
+    "@xus/cli-shared" "^0.4.0"
     tapable "^2.2.0"
 
 "@xus/eslint-config@^0.1.4":
@@ -2007,10 +2007,10 @@
     stylelint-no-unsupported-browser-features "^4.1.4"
     stylelint-order "^4.1.0"
 
-"@xus/plugin-cmd-roll-lib@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@xus/plugin-cmd-roll-lib/-/plugin-cmd-roll-lib-0.3.1.tgz#ac547a7780fb6f7087134b744c042673276aec72"
-  integrity sha512-vlV5AVYnAJf3dExotQGKUAS+ARy6DcD++v/xcsL0SVzxZNxjaS7VLk3aPlsKuTGVKLsKvgk1pfrxJy/xgTsDBQ==
+"@xus/plugin-cmd-roll-lib@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@xus/plugin-cmd-roll-lib/-/plugin-cmd-roll-lib-0.4.0.tgz#545e3080a9dc0da69f37904e88a17016570fe2f4"
+  integrity sha512-wGhfotq4yeLaCTyi1yW9U885olH40e1mNpo/wb32lb3HLyRLN5SkDO+ftFA/fQtN11SnGZp9cHiMsC500O1bhQ==
   dependencies:
     "@rollup/plugin-alias" "^3.1.2"
     "@rollup/plugin-commonjs" "^17.1.0"
@@ -2018,12 +2018,11 @@
     "@rollup/plugin-replace" "^2.4.1"
     "@rollup/pluginutils" "^4.1.0"
     "@xus/babel-preset" "^0.1.11"
-    "@xus/cli-shared" "^0.3.1"
-    "@xus/cli-types" "^0.3.1"
-    "@xus/core" "^0.3.1"
+    "@xus/cli-shared" "^0.4.0"
+    "@xus/cli-types" "^0.4.0"
+    "@xus/core" "^0.4.0"
     autoprefixer "^10.2.4"
     clean-css "^5.1.1"
-    crypto "^1.0.1"
     esbuild "^0.9.2"
     magic-string "^0.25.7"
     mime "^2.5.2"
@@ -2036,25 +2035,25 @@
     terser "^5.6.0"
     url "^0.11.0"
 
-"@xus/preset-built-in@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@xus/preset-built-in/-/preset-built-in-0.3.1.tgz#1ab27468e366fadefd038f02417b9cf563d01544"
-  integrity sha512-7AzUaGqUqKerm/EZxz7oZ+jgtcYSfHvYx/tfB2yIW47GJUnwe/T5UYLs0C3O6l9JoWKKwzxJXEmAEgoiSNl+/Q==
+"@xus/preset-built-in@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@xus/preset-built-in/-/preset-built-in-0.4.0.tgz#74833a8592b0abbfb46909c8a426fc1b6112ce1c"
+  integrity sha512-pr/uHdPFS+yIvaiuBPYnfBwhkoFzjgkcoAOFgmq4UQMYsP3XJdEVyw32UDpKdSO9HA5bvw1IiYK8ocyXJJ9WbA==
   dependencies:
-    "@xus/cli-shared" "^0.3.1"
-    "@xus/cli-types" "^0.3.1"
-    "@xus/core" "^0.3.1"
-    "@xus/plugin-cmd-roll-lib" "^0.3.1"
-    "@xus/rollup-chain" "^0.2.6"
+    "@xus/cli-shared" "^0.4.0"
+    "@xus/cli-types" "^0.4.0"
+    "@xus/core" "^0.4.0"
+    "@xus/plugin-cmd-roll-lib" "^0.4.0"
+    "@xus/rollup-chain" "^0.3.1"
     conventional-changelog "^3.1.24"
     release-it "^14.4.1"
     rollup "^2.41.1"
     webpack-chain "^6.5.1"
 
-"@xus/rollup-chain@^0.2.6":
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/@xus/rollup-chain/-/rollup-chain-0.2.6.tgz#826b48b6737cfe9437a417ec5c3c3ca0b337f29c"
-  integrity sha512-0fso6+HTPrh7vxOTDgs8E6eV0sox95GHNpIYvA9Ct6fWIlGd9cKsP0jrwS2Yb66JSKRTlY5Z/NYZWRgTH2Jbzg==
+"@xus/rollup-chain@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@xus/rollup-chain/-/rollup-chain-0.3.1.tgz#eb2bb9aa80fa68da72ba050a541dfdd1ddf748c6"
+  integrity sha512-mG8zDtF0OqQYAOrh+rK6xAL3mwIO66XCUcvI2mzmO3Gt5I5Rk+csxi+EuKESvSifnPQWGyQs4YsfYNePxSGB1Q==
 
 JSONStream@^1.0.4:
   version "1.3.5"
@@ -3265,11 +3264,6 @@ crypto-random-string@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/crypto-random-string/-/crypto-random-string-2.0.0.tgz#ef2a7a966ec11083388369baa02ebead229b30d5"
   integrity sha512-v1plID3y9r/lPhviJ1wrXpLeyUIGAZ2SHNYTEapm7/8A9nLPoyvVp3RK/EPFqn5kEznyWgYZNsRtYYIWbuG8KA==
-
-crypto@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/crypto/-/crypto-1.0.1.tgz#2af1b7cad8175d24c8a1b0778255794a21803037"
-  integrity sha512-VxBKmeNcqQdiUQUW2Tzq0t377b54N2bMtXO/qiLa+6eRRmmC4qT3D4OnTGoT/U6O9aklQ/jTwbOtRMTTY8G0Ig==
 
 css-rule-stream@^1.1.0:
   version "1.1.0"
@@ -4777,6 +4771,11 @@ human-signals@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-2.1.0.tgz#dc91fcba42e4d06e4abaed33b3e7a3c02f514ea0"
   integrity sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==
+
+husky@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-5.2.0.tgz#fc5e1c2300d34855d47de4753607d00943fc0802"
+  integrity sha512-AM8T/auHXRBxlrfPVLKP6jt49GCM2Zz47m8G3FOMsLmTv8Dj/fKVWE0Rh2d4Qrvmy131xEsdQnb3OXRib67PGg==
 
 iconv-lite@0.4.24, iconv-lite@^0.4.24:
   version "0.4.24"
